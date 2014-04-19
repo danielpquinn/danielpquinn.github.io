@@ -39,7 +39,16 @@
       </figure>
     </div>
     <div class="col-md-7 col-md-offset-1">
-      <section class="about">
+        <section class="about">
+        <h2>Lowes vs Home Depot</h2>
+        <div class="bar-chart" id="533b231c4cec888954f462fe"></div>
+        <p>Chart by <a href="http://chatterchart.com">chatterchart.com</a></p>
+        <script type="text/javascript" src="http://chatterchart.com/js/dist/bar-chart-embed.js"></script>
+        <script type="text/javascript">
+        document.addEventListener("barchartembed:ready", function (e) {
+        var barChart = new BarChartEmbed("533b231c4cec888954f462fe", "http://chatterchart.com");
+        });
+        </script>
         <h1>Hello!</h1>
 
         <p class="lead">I am currently working on a web software product with a small team of entrepreneurs and developers. Previously, I worked with a talented team at <a href="http://smashingideas.com" target="_blank">Smashing Ideas</a>. In both roles, my focus has been primarily on front end web development for desktop and mobile devices.</p>
