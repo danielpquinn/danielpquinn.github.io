@@ -1,12 +1,14 @@
 {
-  "name": "danielpquinn.github.io",
+  "name": "simple-static",
   "version": "0.0.0",
-  "homepage": "https://github.com/danielpquinn/danielpquinn.github.io",
   "authors": [
     "Dan Quinn <danthemilk@gmail.com>"
   ],
+  "description": "Simple static site",
+  "keywords": [
+    "static"
+  ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,9 +17,12 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.1.1"
-  },
-  "devDependencies": {
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "requirejs": "~2.1.14",
+    "bootstrap": "~3.1.1",
+    "requirejs-text": "~2.0.12",
+    "almond": "~0.2.9",
+    "showdown": "~0.3.1"
   }
 }

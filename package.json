@@ -1,23 +1,16 @@
 {
-  "name": "danielpquinn.github.io",
+  "name": "simple-static",
   "version": "0.0.0",
-  "description": "danielpquinn.github.io ======================",
-  "main": "index.js",
+  "description": "Simple static site",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-requirejs": "~0.1.3",
+    "gulp": "~3.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/danielpquinn/danielpquinn.github.io.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danielpquinn/danielpquinn.github.io/issues"
-  },
-  "homepage": "https://github.com/danielpquinn/danielpquinn.github.io",
-  "devDependencies": {
-    "gulp": "~3.6.0",
-    "gulp-concat": "~2.2.0"
-  }
+  "license": "ISC"
 }

@@ -1,20 +1,18 @@
 var gulp = require('gulp'),
-  concat = require('gulp-concat');
+  rjs = require('gulp-requirejs');
 
-
-gulp.task('styles', function () {
+gulp.task('default', function() {
+  
+  rjs({
+    baseUrl: 'js/',
+    mainConfigFile: 'js/main.js',
+    name: 'main',
+    out: 'optimized.js',
+    include: ['../bower_components/almond/almond.js']
+  }).pipe(gulp.dest('dist/'));
+  
   gulp.src([
-    'bower_components/bootstrap/dist/css/bootstrap.min.css'
-  ]).pipe(concat('vendor.css'))
-  .pipe(gulp.dest('css'));
+    'bower_components/bootstrap/dist/css/bootstrap.css',
+    'bower_components/bootstrap/dist/css/bootstrap.css.map'
+  ]).pipe(gulp.dest('dist/'))
 });
-
-gulp.task('scripts', function () {
-  gulp.src([
-    'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/bootstrap/dist/js/bootstrap.min.js'
-  ]).pipe(concat('vendor.js'))
-  .pipe(gulp.dest('js'));
-});
-
-gulp.task('default', ['styles', 'scripts']);
