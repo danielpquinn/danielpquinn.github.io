@@ -10,7 +10,7 @@ My current role involves designing and developing single page web applications w
 <br>
 
 
-###Smashing Ideas <small>Seattle, WA</small></h3>
+###Smashing Ideas <small>Seattle, WA</small>
 ####Developer II <small>February 2013 - December 2013</small>
 ####Designer <small>March 2010 - 2013</small>
 
@@ -22,7 +22,7 @@ My current role involves designing and developing single page web applications w
 <br>
 
 
-###Massive Studios <small>Bozeman, MT</small></h3>
+###Massive Studios <small>Bozeman, MT</small>
 ####Web Designer / Front End Developer <small>April 2008 - October 2009</small>
 
 * Front end development
@@ -46,6 +46,7 @@ Able to rapidly develop single page web applications.
 * RequireJS
 * Bower
 * Grunt/Gulp
+* Canvas
 * D3
 
 <br>
