@@ -2,7 +2,7 @@
 
 <br>
 
-###Undisclosed <small>Seattle, WA</small>
+###Earlybirdy.com <small>Seattle, WA</small>
 ####UX Design Engineer <small>December 2013 - Present</small>
 
 My current role involves designing and developing single page web applications with a small team in an agile environment. Most of my time is dedicated to rapidly prototyping product features using Node.js, D3 and AngularJS.
