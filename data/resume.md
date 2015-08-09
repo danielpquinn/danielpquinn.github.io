@@ -58,7 +58,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p>Full stack JavaScript development for a social media analytics platform and a startup finance modeling tool. Built RESTful APIs using Express.js which bridge between third party data provider APIs, ElasticSearch, MongoDB and AngularJS client. Authored comprehensive end-to-end tests using Protractor and deployed application to EC2 using Ansible. Converted wireframes into SCSS, HTML5 and Twitter Bootstrap.</p>
+        <p>Full stack JavaScript development for a social media analytics platform and a startup finance modeling tool. Built RESTful APIs using Express.js which bridge between third party data provider APIs, ElasticSearch, MongoDB and AngularJS client. Authored comprehensive end-to-end tests using Protractor and deployed application to EC2 via Ansible. Converted wireframes into SCSS, HTML5 and Twitter Bootstrap.</p>
       </div>
     </div>
   </section>
@@ -92,7 +92,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p>Designed and built websites for local and national clients using Flash, CSS, and HTML. Created basic content management systems using PHP. Assisted with visual design and layout of printed marketing material and POS displays.</p>
+        <p>Designed and built websites for local and national clients using Flash, CSS, and HTML. Created basic content management systems with PHP. Assisted with visual design and layout of printed marketing material and POS displays.</p>
       </div>
     </div>
   </section>

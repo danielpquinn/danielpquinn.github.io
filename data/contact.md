@@ -1,5 +1,5 @@
 ###Email
-[dan@danquinndesign.com](mailto:dan@danquinndesign.com)
+[danquinndev@gmail.com](mailto:danquinndev@gmail.com)
 
 ###Twitter
 [@danielpquinn](http://twitter.com/danielpquinn)
