@@ -75,7 +75,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p>Used Canvas and Backbone.js to build an HTML5 game for Triumph Learning. Used Backbone.js to build a lightweight video player and gallery used in a website for one of Mattel’s popular brands. Built Drupal themes for Sony Pictures Television International using HTML5, CSS3, and JavaScript. Authored jQuery plugins for a variety of reusable UI components.</p>
+        <p>Used Backbone.js to build a lightweight video player and gallery used in a website for one of Mattel’s popular brands. Used Canvas and Backbone.js to build an HTML5 game for Triumph Learning. Built Drupal themes for Sony Pictures Television International using HTML5, CSS3, and JavaScript. Authored jQuery plugins for a variety of reusable UI components.</p>
       </div>
     </div>
   </section>
