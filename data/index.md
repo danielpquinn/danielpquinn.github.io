@@ -47,6 +47,23 @@
   </section>
   <section>
     <div class="row">
+      <div class="col-md-4"><strong>Luminus Networks</strong></div>
+      <div class="col-md-4"><a target="_blank" href="https://luminusnetworks.com">luminusnetworks.com</a></div>
+      <div class="col-md-4">Oct 2015 - Present</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Senior Front End Developer</strong></div>
+      <div class="col-md-4">Seattle, WA</div>
+      <div class="col-md-4">(8 mos)</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Single Page Web Application development using TypeScript and Angular 2.0. Built components for browsing and visualizing network data using SVG and graph layout algorithms. Authored tests to ensure that continuous integration style of development did not cause regressions in the UI. Served as a bridge between technical and creative team members.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
       <div class="col-md-4"><strong>Earlybirdy, Wealthfile</strong></div>
       <div class="col-md-4"><a target="_blank" href="https://earlybirdy.com">earlybirdy.com</a>, <a target="_blank" href="https://wealthfile.com">wealthfile.com</a></div>
       <div class="col-md-4">Dec 2013 - present</div>
