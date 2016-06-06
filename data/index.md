@@ -17,14 +17,13 @@
     <div class="row">
       <div class="col-md-12">
         <span class="badge">JavaScript</span>
-        <span class="badge">ES6</span>
-        <span class="badge">Gulp</span>
         <span class="badge">AngularJS</span>
-        <span class="badge">Backbone</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">UI/UX Design</span>
+        <span class="badge">WebPack</span>
         <span class="badge">Node.js</span>
         <span class="badge">Express</span>
-        <span class="badge">Protractor</span>
-        <span class="badge">Mocha</span>
+        <span class="badge">Testing</span>
         <span class="badge">Ansible</span>
       </div>
     </div>
