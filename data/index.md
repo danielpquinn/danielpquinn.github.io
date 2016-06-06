@@ -48,7 +48,7 @@
   <section>
     <div class="row">
       <div class="col-md-4"><strong>Luminus Networks</strong></div>
-      <div class="col-md-4"><a target="_blank" href="https://luminusnetworks.com">luminusnetworks.com</a></div>
+      <div class="col-md-4"><a target="_blank" href="http://www.luminusnetworks.com">luminusnetworks.com</a></div>
       <div class="col-md-4">Oct 2015 - Present</div>
     </div>
     <div class="row">
