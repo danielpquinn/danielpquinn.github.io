@@ -144,7 +144,7 @@
         <section>
           <div class="row">
             <div class="col-md-8"><strong>Springfield Web Meetup Group</strong></div>
-            <div class="col-md-4">2015</div>
+            <div class="col-md-4">2015 - 2016</div>
           </div>
           <div class="row">
             <div class="col-md-12">
