@@ -98,7 +98,7 @@
   <section>
     <div class="row">
       <div class="col-md-4"><strong>Massive Studios</strong></div>
-      <div class="col-md-4"><a target="_blank" href="http://massivestudios.net">massivestudios.net</a></div>
+      <div class="col-md-4"><a target="_blank" href="http://www.massive.net">massivestudios.net</a></div>
       <div class="col-md-4">Apr 2008 — Oct 2009</div>
     </div>
     <div class="row">
