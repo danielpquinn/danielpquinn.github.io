@@ -64,7 +64,7 @@
   <section>
     <div class="row">
       <div class="col-md-4"><strong>Earlybirdy, Wealthfile</strong></div>
-      <div class="col-md-4"><a target="_blank" href="https://earlybirdy.com">earlybirdy.com</a>, <a target="_blank" href="https://wealthfile.com">wealthfile.com</a></div>
+      <div class="col-md-4">earlybirdy.com, <a target="_blank" href="https://wealthfile.com">wealthfile.com</a></div>
       <div class="col-md-4">Dec 2013 - Sep 2015</div>
     </div>
     <div class="row">
