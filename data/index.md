@@ -32,7 +32,7 @@
     <div class="row">
       <div class="col-md-12">
         <p class="lead">
-          Motivated and reliable JavaScript developer with a passion for understanding web technology and using it to implement polished user experiences on desktop and mobile platforms. Capable of writing server-side applications in Node.js. When I'm not writing code I enjoy skateboarding and hanging out with my Dachshund Monty.
+          Motivated and reliable JavaScript developer with a passion for understanding web technology and using it to implement polished user experiences on desktop and mobile platforms. Capable of writing server-side applications in Node.js. When I'm not writing code I enjoy skateboarding and hanging out with my dachshund Monty.
         </p>
       </div>
     </div>
