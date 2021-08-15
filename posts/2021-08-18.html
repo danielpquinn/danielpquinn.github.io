@@ -1,0 +1,108 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>Dan Quinn</title><meta name="next-head-count" content="3"/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-a54b4f32bdc1ef890ddd.js"></script><script src="/_next/static/chunks/webpack-61f1b6d34e7ba415b8c1.js" defer=""></script><script src="/_next/static/chunks/framework-895f067827ebe11ffe45.js" defer=""></script><script src="/_next/static/chunks/main-b9780dc6f4fa7abb3771.js" defer=""></script><script src="/_next/static/chunks/pages/_app-76f68770679821db743d.js" defer=""></script><script src="/_next/static/chunks/pages/posts/%5Bid%5D-191e23b204acc0472899.js" defer=""></script><script src="/_next/static/uJO5SeHr9GTVE-9r-pYl3/_buildManifest.js" defer=""></script><script src="/_next/static/uJO5SeHr9GTVE-9r-pYl3/_ssgManifest.js" defer=""></script></head><body><div id="__next"><h1><a href="/">Dan Quinn</a></h1><article><time datetime="2021-08-18">2021-08-18</time><h2>Code Sketch - Wobbler</h2><br/><div><video autoplay loop controls>
+  <source src="/assets/2021-08/wobbler.mp4" type="video/mp4">
+</video>
+<p><a href="https://nannou.cc/">Nannou</a> source code:</p>
+<pre><code>use nannou::prelude::*;
+
+fn main() {
+    nannou::app(model)
+        .update(update)
+        .run();
+}
+
+struct Model {
+    cols: u32,
+    rows: u32,
+    grid_size: u32,
+    padding: u32,
+    wobble_timer: i32,
+    wobbler: [i32; 2],
+}
+
+fn model(app: &#x26;App) -> Model {
+    // Create a new window! Store the ID so we can refer to it later.
+    let width = 200;
+    let height = 200;
+    let grid_size = 40;
+    let padding = 5;
+    let cols = width / grid_size;
+    let rows = height / grid_size;
+
+    app.new_window()
+        .size(width, height)
+        .view(view)
+        .build()
+        .unwrap();
+
+    Model {
+        cols,
+        rows,
+        grid_size,
+        padding,
+        wobble_timer: 0,
+        wobbler: [0, 0],
+    }
+}
+
+fn update(_app: &#x26;App, model: &#x26;mut Model, _update: Update) {
+    model.wobble_timer += 1;
+    if model.wobble_timer > 10 {
+        model.wobbler[0] = map_range(random_f32(), 0.0, 1.0, 1.0, (model.cols - 1) as f32).floor() as i32;
+        model.wobbler[1] = map_range(random_f32(), 0.0, 1.0, 1.0, (model.rows - 1) as f32).floor() as i32;
+        model.wobble_timer = 0;
+    }
+}
+
+fn view(app: &#x26;App, model: &#x26;Model, frame: Frame) {
+    let draw = app.draw();
+    let win = app.main_window();
+    let win_r = win.rect();
+
+    if frame.nth() == 0 {
+        draw.background().color(BLACK);
+    }
+    
+    draw.rect()
+        .w_h(win_r.w(), win_r.h())
+        .color(rgba(0.0, 0.0, 0.0, 0.01));
+
+    let t1 = app.time * 2.0;
+    let t2 = app.time * 3.0;
+    
+    for i in 1..model.rows - 1 {
+        for j in 1..model.cols - 1 {
+
+            if model.wobbler[0] == i as i32 &#x26;&#x26; model.wobbler[1] == j as i32 {
+                let mut x = map_range(i as f32, 0.0, model.rows as f32, win_r.left(), win_r.right()) + model.grid_size as f32 / 2.0;
+                let mut y = map_range(j as f32, 0.0, model.rows as f32, win_r.left(), win_r.right()) + model.grid_size as f32 / 2.0;
+                y += t1.sin() * (t2.sin() * 10.0);
+                x += t1.cos() * (t2.cos() * 10.0);
+
+                draw.rect()
+                    .x_y(x, y)
+                    .w_h(model.grid_size as f32 - model.padding as f32 / 2.0, model.grid_size as f32 - model.padding as f32 / 2.0)
+                    .stroke_weight(2.0)
+                    .color(BLACK)
+                    .stroke(hsl(clamp(t1.sin(), 0.6, 0.7), 1.0, 0.5));
+            }
+        }
+    }
+
+    // Write the result of our drawing to the window's frame.
+    draw.to_frame(app, &#x26;frame).unwrap();
+    
+    if frame.nth() &#x3C; 300 {
+        let file_path = captured_frame_path(app, &#x26;frame);
+        app.main_window().capture_frame(file_path);
+    }
+}
+
+fn captured_frame_path(app: &#x26;App, frame: &#x26;Frame) -> std::path::PathBuf {
+    app.project_path()
+        .expect("failed to locate `project_path`")
+        .join("frames")
+        .join(format!("{:04}", frame.nth()))
+        .with_extension("png")
+}
+</code></pre>
+</div></article></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"postData":{"id":"2021-08-18","contentHtml":"\u003cvideo autoplay loop controls\u003e\n  \u003csource src=\"/assets/2021-08/wobbler.mp4\" type=\"video/mp4\"\u003e\n\u003c/video\u003e\n\u003cp\u003e\u003ca href=\"https://nannou.cc/\"\u003eNannou\u003c/a\u003e source code:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003euse nannou::prelude::*;\n\nfn main() {\n    nannou::app(model)\n        .update(update)\n        .run();\n}\n\nstruct Model {\n    cols: u32,\n    rows: u32,\n    grid_size: u32,\n    padding: u32,\n    wobble_timer: i32,\n    wobbler: [i32; 2],\n}\n\nfn model(app: \u0026#x26;App) -\u003e Model {\n    // Create a new window! Store the ID so we can refer to it later.\n    let width = 200;\n    let height = 200;\n    let grid_size = 40;\n    let padding = 5;\n    let cols = width / grid_size;\n    let rows = height / grid_size;\n\n    app.new_window()\n        .size(width, height)\n        .view(view)\n        .build()\n        .unwrap();\n\n    Model {\n        cols,\n        rows,\n        grid_size,\n        padding,\n        wobble_timer: 0,\n        wobbler: [0, 0],\n    }\n}\n\nfn update(_app: \u0026#x26;App, model: \u0026#x26;mut Model, _update: Update) {\n    model.wobble_timer += 1;\n    if model.wobble_timer \u003e 10 {\n        model.wobbler[0] = map_range(random_f32(), 0.0, 1.0, 1.0, (model.cols - 1) as f32).floor() as i32;\n        model.wobbler[1] = map_range(random_f32(), 0.0, 1.0, 1.0, (model.rows - 1) as f32).floor() as i32;\n        model.wobble_timer = 0;\n    }\n}\n\nfn view(app: \u0026#x26;App, model: \u0026#x26;Model, frame: Frame) {\n    let draw = app.draw();\n    let win = app.main_window();\n    let win_r = win.rect();\n\n    if frame.nth() == 0 {\n        draw.background().color(BLACK);\n    }\n    \n    draw.rect()\n        .w_h(win_r.w(), win_r.h())\n        .color(rgba(0.0, 0.0, 0.0, 0.01));\n\n    let t1 = app.time * 2.0;\n    let t2 = app.time * 3.0;\n    \n    for i in 1..model.rows - 1 {\n        for j in 1..model.cols - 1 {\n\n            if model.wobbler[0] == i as i32 \u0026#x26;\u0026#x26; model.wobbler[1] == j as i32 {\n                let mut x = map_range(i as f32, 0.0, model.rows as f32, win_r.left(), win_r.right()) + model.grid_size as f32 / 2.0;\n                let mut y = map_range(j as f32, 0.0, model.rows as f32, win_r.left(), win_r.right()) + model.grid_size as f32 / 2.0;\n                y += t1.sin() * (t2.sin() * 10.0);\n                x += t1.cos() * (t2.cos() * 10.0);\n\n                draw.rect()\n                    .x_y(x, y)\n                    .w_h(model.grid_size as f32 - model.padding as f32 / 2.0, model.grid_size as f32 - model.padding as f32 / 2.0)\n                    .stroke_weight(2.0)\n                    .color(BLACK)\n                    .stroke(hsl(clamp(t1.sin(), 0.6, 0.7), 1.0, 0.5));\n            }\n        }\n    }\n\n    // Write the result of our drawing to the window's frame.\n    draw.to_frame(app, \u0026#x26;frame).unwrap();\n    \n    if frame.nth() \u0026#x3C; 300 {\n        let file_path = captured_frame_path(app, \u0026#x26;frame);\n        app.main_window().capture_frame(file_path);\n    }\n}\n\nfn captured_frame_path(app: \u0026#x26;App, frame: \u0026#x26;Frame) -\u003e std::path::PathBuf {\n    app.project_path()\n        .expect(\"failed to locate `project_path`\")\n        .join(\"frames\")\n        .join(format!(\"{:04}\", frame.nth()))\n        .with_extension(\"png\")\n}\n\u003c/code\u003e\u003c/pre\u003e\n","title":"Code Sketch - Wobbler","date":"2021-08-18"}},"__N_SSG":true},"page":"/posts/[id]","query":{"id":"2021-08-18"},"buildId":"uJO5SeHr9GTVE-9r-pYl3","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
